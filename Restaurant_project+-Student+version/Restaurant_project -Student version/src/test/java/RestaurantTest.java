@@ -68,6 +68,19 @@ class RestaurantTest {
     public void removing_item_that_does_not_exist_should_throw_exception() {
         assertThrows(itemNotFoundException.class, () -> restaurant.removeFromMenu("French fries"));
     }
+    //failing test cases to get total order value
+
+    @Test
+    public void return_total_order_value_with_selected_menu_items(){
+        String[] selectedItems={"Sweet corn soup","Vegetable lasagne"};
+        assertEquals(restaurant.getOrderAmount(selectedItems),388);
+    }
+
+    @Test
+    public void return_price_as_zero_when_no_selection(){
+        String[] selectedItems={};
+        assertEquals(restaurant.getOrderAmount(selectedItems),0);
+    }
 
 }
 
