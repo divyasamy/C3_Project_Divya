@@ -10,7 +10,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class RestaurantTest {
     Restaurant restaurant;
-
     //Refactoring repetitive code
     @BeforeEach
     public void restaurantAdd() {
@@ -73,15 +72,14 @@ class RestaurantTest {
     @Test
     public void return_total_order_value_with_selected_menu_items(){
         String[] selectedItems={"Sweet corn soup","Vegetable lasagne"};
-        assertEquals(restaurant.getOrderAmount(selectedItems),388);
+        assertEquals(restaurant.getOrderValue(selectedItems),388);
     }
 
     @Test
     public void return_price_as_zero_when_no_selection(){
         String[] selectedItems={};
-        assertEquals(restaurant.getOrderAmount(selectedItems),0);
+        assertEquals(restaurant.getOrderValue(selectedItems),0);
     }
-
 }
 
 

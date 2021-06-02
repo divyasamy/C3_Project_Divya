@@ -1,10 +1,7 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import java.time.LocalTime;
-
 import static org.junit.jupiter.api.Assertions.*;
-
 
 class RestaurantServiceTest {
 
@@ -33,8 +30,6 @@ class RestaurantServiceTest {
         assertThrows(restaurantNotFoundException.class, () -> service.findRestaurantByName("Pantry d'or"));
     }
     //<<<<<<<<<<<<<<<<<<<<SEARCHING>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
 
 
     //>>>>>>>>>>>>>>>>>>>>>>ADMIN: ADDING & REMOVING RESTAURANTS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
